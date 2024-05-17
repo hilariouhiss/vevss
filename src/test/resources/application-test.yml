@@ -19,15 +19,15 @@ spring:
   jpa:
     show-sql: false
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
     open-in-view: false
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
   datasource:
-    url: jdbc:postgresql://124.70.27.30:15400/vevss_db
-    username: 'vevss'
-    password: '!Qwer432'
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:h2:mem:vevss_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: test
+    password: test
+    driver-class-name: org.h2.Driver
     druid:
       initial-size: 5
       min-idle: 5
@@ -44,6 +44,16 @@ spring:
       filters: stat,wall,log4j
       connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
+  h2:
+    console:
+      settings:
+        trace: true
+        web-allow-others: true
+      enabled: true
+      path: /h2-console
+  sql:
+    init:
+      data-locations: classpath:sql/data.sql
 logging:
   config: classpath:log4j2.xml
   level:
