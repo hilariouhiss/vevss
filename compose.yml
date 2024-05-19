@@ -30,10 +30,8 @@ services:
         POSTGRES_USER: vevss
         POSTGRES_PASSWORD: "!Qwer432"
         POSTGRES_DB: vevss
-        LANG: en_US.UTF-8
-        TZ: Asia/Shanghai
     volumes:
-        - ./init/:/docker-entrypoint-initdb.d/
+        - ./init/db.sql:/docker-entrypoint-initdb.d/db.sql
     expose:
       - 5432
     healthcheck:
