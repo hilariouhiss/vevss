@@ -1,12 +1,12 @@
 server:
-  port: 8081
+  port: 8080
 spring:
   cache:
     type: redis
     cache-names: vevss
   data:
     redis:
-      host: localhost
+      host: redis
       port: 6379
       database: 0
       timeout: 3000
@@ -24,7 +24,8 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
-    url: jdbc:postgresql://124.70.27.30:15400/vevss_db
+    #    124.70.27.30:15400
+    url: ${DATABASE_URL}
     username: 'vevss'
     password: '!Qwer432'
     driver-class-name: org.postgresql.Driver
