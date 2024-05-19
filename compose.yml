@@ -30,7 +30,7 @@ services:
         POSTGRES_USER: "vevss"
         POSTGRES_PASSWORD: "!Qwer432"
         POSTGRES_DB: "vevss_db"
-        LANG: zh_CN.UTF-8
+        LANG: en_US.UTF-8
         TZ: Asia/Shanghai
     volumes:
         - ./init/vevss_db.sql:/docker-entrypoint-initdb.d/vevss_db.sql
