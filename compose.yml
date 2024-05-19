@@ -20,20 +20,20 @@ services:
       - "80:80"
     volumes:
       # 挂载 配置文件 和 静态资源
-      - ./init/:/etc/nginx/conf.d/
+      - ./init/react.conf:/etc/nginx/conf.d/react.conf
       - ./build:/usr/share/nginx/html
 
 # PostgreSQL
   postgresql:
     image: postgres:16
     environment:
-        POSTGRES_USER: vevss
+        POSTGRES_USER: "vevss"
         POSTGRES_PASSWORD: "!Qwer432"
-        POSTGRES_DB: vevss_db
-        LANG: en_US.UTF-8
+        POSTGRES_DB: "vevss_db"
+        LANG: zh_CN.UTF-8
         TZ: Asia/Shanghai
     volumes:
-        - ./init/:/docker-entrypoint-initdb.d/
+        - ./init/vevss_db.sql:/docker-entrypoint-initdb.d/vevss_db.sql
     expose:
       - 5432
     healthcheck:
