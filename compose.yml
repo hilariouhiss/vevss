@@ -28,7 +28,7 @@ services:
     image: postgres:16
     environment:
         POSTGRES_USER: vevss
-        POSTGRES_PASSWORD: !Qwer432
+        POSTGRES_PASSWORD: "!Qwer432"
         POSTGRES_DB: vevss_db
         LANG: en_US.UTF-8
         TZ: Asia/Shanghai
