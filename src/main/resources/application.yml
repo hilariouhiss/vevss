@@ -25,8 +25,8 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     #    124.70.27.30:15400
-    url: ${DATABASE_URL}
-    username: 'vevss'
+    url: ${DATABASE_URL:jdbc:postgresql://124.70.27.30:15400/vevss}
+    username: vevss
     password: '!Qwer432'
     driver-class-name: org.postgresql.Driver
     druid:
