@@ -3,7 +3,7 @@ services:
     build: .
     # 设置环境变量
     environment:
-      DATABASE_URL: jdbc:postgresql://postgresql:5432/vevss_db
+      DATABASE_URL: jdbc:postgresql://postgresql:5432/vevss
     # 映射 8080 端口
     ports:
       - "8081:8080"
@@ -29,7 +29,7 @@ services:
     environment:
         POSTGRES_USER: vevss
         POSTGRES_PASSWORD: "!Qwer432"
-        POSTGRES_DB: vevss_db
+        POSTGRES_DB: vevss
         LANG: en_US.UTF-8
         TZ: Asia/Shanghai
     volumes:
