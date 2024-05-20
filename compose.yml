@@ -13,15 +13,6 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
-  # nginx服务配置
-  nginx:
-    image: nginx:1.24.0
-    ports:
-      - "80:80"
-    volumes:
-      # 挂载 配置文件 和 静态资源
-      - ./init/react.conf:/etc/nginx/conf.d/react.conf
-      - ./build:/usr/share/nginx/html
 
 # PostgreSQL
   postgresql:
