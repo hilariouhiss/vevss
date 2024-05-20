@@ -6,7 +6,7 @@ services:
       DATABASE_URL: jdbc:postgresql://postgresql:5432/vevss
     # 映射 8080 端口
     ports:
-      - "8081:8080"
+      - "8080:8080"
     # 依赖mysql和redis服务
     depends_on:
       postgresql:
