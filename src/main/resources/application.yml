@@ -10,12 +10,14 @@ spring:
       port: 6379
       database: 0
       timeout: 3000
+      password: qweasdzxc
       lettuce:
         pool:
           enabled: true
           max-idle: 8
           min-idle: 0
           max-active: 8
+
   jpa:
     show-sql: false
     hibernate:
