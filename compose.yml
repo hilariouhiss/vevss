@@ -34,6 +34,5 @@ services:
   # redis服务配置
   redis:
     image: redis:7.2.3
-    command: [ "redis-server", "--requirepass", "qweasdzxc" ]
     expose:
       - 6379
