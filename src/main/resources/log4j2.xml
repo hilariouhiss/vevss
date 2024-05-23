@@ -143,7 +143,7 @@
         <!--spring日志-->
         <Logger name="org.springframework" level="info"/>
         <!--druid数据源日志-->
-        <Logger name="druid.sql.Statement" level="warn"/>
+<!--        <Logger name="druid.sql.Statement" level="warn"/>-->
         <!-- 用户登录日志 -->
         <Logger name="com.example.demo.filter.JwtAuthenticationFilter" level="info">
             <AppenderRef ref="loginFileAppender"/>
