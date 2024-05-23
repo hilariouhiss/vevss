@@ -12,3 +12,4 @@
 1. 部署: 运行 `docker-compose up -d` 即可, 等待一段时间即可完成部署.
 2. 停止: 运行 `docker-compose down` 即可.
 3. 访问: 访问 `http://localhost:8080` 即可.
+4. 发射点法发
